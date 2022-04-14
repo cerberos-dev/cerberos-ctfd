@@ -47,7 +47,7 @@ services:
 
   db:
     container_name: crb_ctf_mariadb
-    image: mariadb:10.4.12
+    image: mariadb:latest
     restart: always
     ports:
       - "3306:3306"
