@@ -31,10 +31,10 @@ services:
     container_name: crb_ctf_nginx
     image: nginx:latest
     restart: always
-    hostname: localhost # Move to .env
+    hostname: localhost # ToDo: Move to .env
     ports:
-      - "80:80"
-      - "443:8443"
+      - "80:80" # ToDo: Move to .env (if possible)
+      - "443:8443" # ToDo: Move to .env (if possible)
     volumes:
       - .conf/ssl:/etc/ssl:ro
       - .conf/nginx/http.conf:/etc/nginx/nginx.conf:ro
@@ -52,9 +52,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=ctfd
-      - MYSQL_USER=ctfd
-      - MYSQL_PASSWORD=ctfd
+      - MYSQL_ROOT_PASSWORD=ctfd # ToDo: Move to .env (if possible)
+      - MYSQL_USER=ctfd # ToDo: Move to .env (if possible)
+      - MYSQL_PASSWORD=ctfd # ToDo: Move to .env (if possible)
       - MYSQL_DATABASE=ctfd
     volumes:
       - .data/mysql:/var/lib/mysql
