@@ -25,8 +25,8 @@ Thumbs.db
 *.swp
 
 # Other Folders
-/logs
-/data
+.data
+CTFd_update
 
 # Compiled source
 *.com
@@ -50,6 +50,3 @@ Thumbs.db
 *.crt
 *.key
 *.csr
-
-# Data files
-.data
