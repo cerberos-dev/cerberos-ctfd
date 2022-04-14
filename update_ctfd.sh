@@ -1,19 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-echo "Clone a pinned version of the CTFd repository to update directory"
+echo "Cloning a pinned version of the CTFd repository to update directory"
 
-#git clone --single-branch https://github.com/CTFd/CTFd.git CTFd_update
+git clone --single-branch 'https://github.com/CTFd/CTFd.git' CTFd_update
 
-cd CTFd_update || exit
+echo "Moving files to project root"
 
-#find CTFd_update -name conf -prune -print0 | xargs -0 mv -v --target-directory=$(pwd)
+mv ./CTFd_update/* ./ 2> /dev/null
 
-#rm -rf ./CTFd_update
+echo "Removing update directory"
 
-
-
-#find . -ls -name 'conf' -name 'CFTd' -prune
-
-mv $(ls | grep -v 'conf') ./
-
-#mv $(ls CTFd_update --ignore=file1 --ignore==folder1) ./
+rm -rf ./CTFd_update
