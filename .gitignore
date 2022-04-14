@@ -24,10 +24,6 @@ ehthumbs.db
 Thumbs.db
 *.swp
 
-# Other Folders
-.data
-CTFd_update
-
 # Compiled source
 *.com
 *.class
@@ -50,3 +46,9 @@ CTFd_update
 *.crt
 *.key
 *.csr
+
+# Other files and directories
+.data
+conf
+CTFd_update
+Vagrantfile
