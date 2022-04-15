@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Check if env file is present
+if ! test -f ".env"; then
+    echo 'Env file not found, creating one based on env example'
+
+    cp .env.example .env
+fi
+
 # Check if SSL certificate files are present
 if ! test -f "./.conf/ssl/ctfd.crt" && ! test -f "./.conf/ssl/ctfd.key"; then
     echo 'Certificate files not found!'
